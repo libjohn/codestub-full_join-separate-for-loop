@@ -44,4 +44,3 @@ First Example took me down an long (and incorrect) road because my logic branche
 
 While that was an interesting approach.  Ryan's outer join approach was **MUCH** more elegant and consice.  In tidyverse, outer join is `full_join()`.  Once back on track, it became three simple setps.
 
-updates still work but something .git ssh/url needs updating in RStudio IDE config
