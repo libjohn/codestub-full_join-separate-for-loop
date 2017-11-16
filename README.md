@@ -43,3 +43,5 @@ A |	F |	2
 First Example took me down an long (and incorrect) road because my logic branched into the gutter.  I found myself using a for loop with also requried the use of `separate` to transform multi-valed cells into rows.  
 
 While that was an interesting approach.  Ryan's outer join approach was **MUCH** more elegant and consice.  In tidyverse, outer join is `full_join()`.  Once back on track, it became three simple setps.
+
+updates still work but something .git ssh/url needs updating in RStudio IDE config
