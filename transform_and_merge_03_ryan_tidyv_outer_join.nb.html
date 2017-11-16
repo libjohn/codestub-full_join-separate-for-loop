@@ -192,6 +192,13 @@ $(document).ready(function () {
   
 side_a</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJwVlJTMDdETUJDZE9IWktJN1ZDNGg1WmNJRVd4QWxZQlRiSVRReXlGT3pJZGdYc09ESnJGZzNqMUNPQnFZU3dOUFBldkl6bkU5L2V0SmQxV3dNQWc1SVh3RXFrbktFcmdNTXk0aXRBZVJGVnRITzBpajVjRWJuK3BiUkU3b2pjbzF2SDI1c1BtQS9oRmhLZW5VYTZCLzgvSi92OWhkbjZvaHVrOTJsMUV1dGVCdGs4T3ZtczhuU0RHcVh6SkM0NnV6ZkJ2VkhZYXovdWcwcGg1WFd2SHVTUGFKZVZYVHI3MGxEcEZScDdSemROMHlmQ0lVdGUyREZvYXpDVnhYY1QyZkNGeXdRUlc4cTQxaXdlenlyeDZodm54MGJsbEFvSW1sbVpKMjFvSHpISW5ScFNzTWJCNTdtYjBXa1Q2UCtoNnB0Z2c2Uzh1ck1ES2ZOR2NQZ0MrRFpFYXBzQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["country"],"name":[1],"type":["chr"],"align":["left"]},{"label":["dispute"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["side_a"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["side_b"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"1","3":"0","4":"1"},{"1":"B","2":"1","3":"0","4":"1"},{"1":"A","2":"2","3":"0","4":"1"},{"1":"X","2":"3","3":"0","4":"1"},{"1":"Y","2":"3","3":"0","4":"1"},{"1":"Z","2":"3","3":"0","4":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -205,6 +212,13 @@ side_a</code></pre>
   
 side_b</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJwVlJ3VTdETUF4MTI2UmpsVFloOFI4OThBTWdNYml6MDI0b2JRT0tWSklxeVFUYytHVE9IRmFjTnBab0pJUm15WG5Qcjdaak4vdmQ0Ym82VkFDUVE4RXl5QXVrTE1jakF3YnJnTzhBeFZWUTBTL1JTL3B3UjJSSDVKN0lBNUZISW5zOHRxSDY1Z3NtSTd5RkJDK1crRmZkZjBoMWNMWXQxdWR0TDV5RGVYVVNxMDU0VVQ5YjhTclRkSTBhcGJNb3JscHoxTjUrVU5ncE54eTlqR0hwVkNlZnhDSnFrclpyYTk1cWFyMUJ6ei94R01meEcrR1VKSy9NNEpYUm1KcUhkK1BKOEpsTkJCNnViTUpha3pqYkp2THlGMmZ6UmNVWUczQ2FXZW9YcFdrZjNvdEc5akhZNHVEVDNQVmdsZmIwLzFCMXRUZGVVRjdWbXA2VWFTTTQvUUNtM2NkQm13SUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["country"],"name":[1],"type":["chr"],"align":["left"]},{"label":["dispute"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["side_a"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["side_b"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"C","2":"1","3":"1","4":"0"},{"1":"D","2":"1","3":"1","4":"0"},{"1":"E","2":"2","3":"1","4":"0"},{"1":"F","2":"2","3":"1","4":"0"},{"1":"Q","2":"3","3":"1","4":"0"},{"1":"R","2":"3","3":"1","4":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -213,6 +227,13 @@ side_b</code></pre>
 <pre class="r"><code>full_join(side_b, side_a, by = &quot;dispute&quot;) %&gt;% 
   select(dispute, country.x, country.y)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFCcFdTelU3RE1BekgzYVpsdE5vRzBwNWpQZXdGK0JyYzJhbmpsclVGS2twU3Bhblliand5Qjg0clRoY2p5QmdDUzRsLytkdXk0eWlMZVRxTDB4Z0FmR0NCQno1RERIemNQQWdnTW40TndDWUlKakxHTlR4N2c5NE8rWE53L1BIL1BOcXA2VU1YdU5xRCtSNWNFOXdRM0I2R3hRL2c5THdndVB5RDhna3B3WkxnN3JmUTk0Y09zNG8zamIwSWlYSE9OVS91Rlg4dTNIU0JHcVV6S3c3eXNxbGJYZGhqbE1sV2FMVkoxcTZ3Y2FwRlNyNGtWSEZrdnNNcmJsM1h2YVBiT3NrRFdldFNDa3oxemNjSW5UdDd5aEZPV21GSzU5UHNzUlZQMDVtWnF3L3ZiR1I1K0lYWnJpWHJiS25RbGpvcXhFTXBhTDZ3NHF1aXNvY3hqdEJQa05TcUZKb2VFTlVtMFZKenlvc3pXWkhTendiYkQxQ1JkOXdHQXdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["dispute"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["country.x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["country.y"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"C","3":"A"},{"1":"1","2":"C","3":"B"},{"1":"1","2":"D","3":"A"},{"1":"1","2":"D","3":"B"},{"1":"2","2":"E","3":"A"},{"1":"2","2":"F","3":"A"},{"1":"3","2":"Q","3":"X"},{"1":"3","2":"Q","3":"Y"},{"1":"3","2":"Q","3":"Z"},{"1":"3","2":"R","3":"X"},{"1":"3","2":"R","3":"Y"},{"1":"3","2":"R","3":"Z"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->

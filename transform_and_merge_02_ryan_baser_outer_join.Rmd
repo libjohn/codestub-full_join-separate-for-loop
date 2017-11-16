@@ -7,7 +7,25 @@ output: html_notebook
 ```{r}
 # Read in data and split into two frames
 # data <- read.csv("C:/Users/rcd2/Desktop/data.csv")
+
+## Example Data
+
+country <- c("A","B","C","D","A","E","F","X","Y","Z","Q","R")
+dispute <- c(1,1,1,1,2,2,2,3,3,3,3,3)
+side_a <- c(0,0,1,1,0,1,1,0,0,0,1,1)
+side_b <- c(1,1,0,0,1,0,0,1,1,1,0,0)
+
+country_df <- data_frame(country, dispute, side_a, side_b)
+
+country_df
+
 data <- country_df
+
+data
+```
+
+
+```{r}
 country_a <- subset(data,side_a == 1)
 country_b <- subset(data,side_b == 1)
 
