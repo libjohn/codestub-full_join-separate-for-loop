@@ -178,31 +178,36 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
 <pre class="r"><code>library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyB0aWR5dmVyc2U6IGdncGxvdDJcbkxvYWRpbmcgdGlkeXZlcnNlOiB0aWJibGVcbkxvYWRpbmcgdGlkeXZlcnNlOiB0aWR5clxuTG9hZGluZyB0aWR5dmVyc2U6IHJlYWRyXG5Mb2FkaW5nIHRpZHl2ZXJzZTogcHVycnJcbkxvYWRpbmcgdGlkeXZlcnNlOiBkcGx5clxucGFja2FnZSCRZ2dwbG90MpIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjQuMkNvbmZsaWN0cyB3aXRoIHRpZHkgcGFja2FnZXMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbmZpbHRlcigpOiBkcGx5ciwgc3RhdHNcbmxhZygpOiAgICBkcGx5ciwgc3RhdHNcbiJ9 -->
+<pre><code>Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+package 㤼㸱ggplot2㤼㸲 was built under R version 3.4.2Conflicts with tidy packages --------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<div id="build-data-frame-country_df-from-the-first-script.-or-see-readme-for-a-view-of-sample-data-that-you-can-recreate-yourself." class="section level2">
+<h2>Build data frame (country_df) from the first script. Or, see <a href="https://github.com/libjohn/codestub-full_join-separate-for-loop/blob/master/README.md">README</a> for a view of sample data that you can recreate yourself.</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2lkZV9hIDwtIGNvdW50cnlfZGYgJT4lIFxuICBmaWx0ZXIoc2lkZV9hID09IDApXG5zaWRlX2IgPC0gY291bnRyeV9kZiAlPiUgXG4gIGZpbHRlcihzaWRlX2EgPT0gMSlcbiAgXG5mdWxsX2pvaW4oc2lkZV9iLCBzaWRlX2EsIGJ5ID0gXCJkaXNwdXRlXCIpICU+JSBcbiAgc2VsZWN0KGRpc3B1dGUsIGNvdW50cnkueCwgY291bnRyeS55KVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2lkZV9hIDwtIGNvdW50cnlfZGYgJT4lIFxuICBmaWx0ZXIoc2lkZV9hID09IDApXG5gYGAifQ== -->
 <pre class="r"><code>side_a &lt;- country_df %&gt;% 
-  filter(side_a == 0)
-side_b &lt;- country_df %&gt;% 
-  filter(side_a == 1)
-  
-full_join(side_b, side_a, by = &quot;dispute&quot;) %&gt;% 
-  select(dispute, country.x, country.y)</code></pre>
+  filter(side_a == 0)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFCcFdTUzA3RE1CQ0dKM0ZDU2RSV1NOekRDeTdBcTdDbnE4RE9KQzZ5Rk93b2NVVzc0OGdzV0RlTVV3OHFMa1YwSkhzKy94N053L0o4Vmx6a1JRNEFNYkFrZ3BnaEpqRnVFU1NRT2I4Q1lPY0k3bWFLYTN6NUFZTWQ4bGNRK05QalBOcVpxME1OM083QmJBL3VDTzRKSGc3RC9CY0lhbDRUM1B4RCtZYUM0SkhnNmErcm53K2RsclhvT3Q4SWlYa2xyT0NMVnJ6S01GeWpSdUhNaTZOS2RjM1NTbi9NU3JQVXRsM3pWU2lzZzJ4WmE5NDRaWnk0Ny9DT1c5LzNuK2cyUWZESU5GWVpqYUd4K3hocDBIUFVCa0xhcVVvS044MGdibTNpZWJ6RGJGdUk5VDVCNmhPY1NQMmlORTJWMXVKWjF2NHd4Y2FIdm5uVEttM3AyVkR0dURWV1VGeGVtcHFVWVNMWWZBRWZIS0o1L0FJQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["dispute"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["country.x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["country.y"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"C","3":"A"},{"1":"1","2":"C","3":"B"},{"1":"1","2":"D","3":"A"},{"1":"1","2":"D","3":"B"},{"1":"2","2":"E","3":"A"},{"1":"2","2":"F","3":"A"},{"1":"3","2":"Q","3":"X"},{"1":"3","2":"Q","3":"Y"},{"1":"3","2":"Q","3":"Z"},{"1":"3","2":"R","3":"X"},{"1":"3","2":"R","3":"Y"},{"1":"3","2":"R","3":"Z"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZXZhbChsaHMsIHBhcmVudCwgcGFyZW50KSA6IG9iamVjdCAnY291bnRyeV9kZicgbm90IGZvdW5kXG4ifQ== -->
+<pre><code>Error in eval(lhs, parent, parent) : object 'country_df' not found</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogInNpbXBsaWZpZWQgdGlkeXZlcnNlIHdpdGggZnVsbGpvaW4iDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpSeWFuIGhhZCBhIG11Y2ggbW9yZSBlZmZpY2llbnQgYXBwcm9hY2guICBIZXJlIEknbGwgaW1wbGVtZW50IGhpcyBsb2dpYyB1c2luZyB0aWR5dmVyc2Ugc3ludGF4DQoNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpgYGANCg0KDQpgYGB7ciBzaWRlYX0NCnNpZGVfYSA8LSBjb3VudHJ5X2RmICU+JSANCiAgZmlsdGVyKHNpZGVfYSA9PSAwKQ0KDQpzaWRlX2IgPC0gY291bnRyeV9kZiAlPiUgDQogIGZpbHRlcihzaWRlX2EgPT0gMSkNCiAgDQpmdWxsX2pvaW4oc2lkZV9iLCBzaWRlX2EsIGJ5ID0gImRpc3B1dGUiKSAlPiUgDQogIHNlbGVjdChkaXNwdXRlLCBjb3VudHJ5LngsIGNvdW50cnkueSkNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogInNpbXBsaWZpZWQgdGlkeXZlcnNlIHdpdGggZnVsbGpvaW4iDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpSeWFuIGhhZCBhIG11Y2ggbW9yZSBlZmZpY2llbnQgYXBwcm9hY2guICBIZXJlIEknbGwgaW1wbGVtZW50IGhpcyBsb2dpYyB1c2luZyB0aWR5dmVyc2Ugc3ludGF4DQoNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpgYGANCg0KIyMgQnVpbGQgZGF0YSBmcmFtZSAoY291bnRyeV9kZikgZnJvbSB0aGUgZmlyc3Qgc2NyaXB0LiBPciwgc2VlIFtSRUFETUVdKGh0dHBzOi8vZ2l0aHViLmNvbS9saWJqb2huL2NvZGVzdHViLWZ1bGxfam9pbi1zZXBhcmF0ZS1mb3ItbG9vcC9ibG9iL21hc3Rlci9SRUFETUUubWQpIGZvciBhIHZpZXcgb2Ygc2FtcGxlIGRhdGEgdGhhdCB5b3UgY2FuIHJlY3JlYXRlIHlvdXJzZWxmLg0KDQpgYGB7ciBzaWRlYX0NCnNpZGVfYSA8LSBjb3VudHJ5X2RmICU+JSANCiAgZmlsdGVyKHNpZGVfYSA9PSAwKQ0KDQpzaWRlX2IgPC0gY291bnRyeV9kZiAlPiUgDQogIGZpbHRlcihzaWRlX2EgPT0gMSkNCiAgDQpmdWxsX2pvaW4oc2lkZV9iLCBzaWRlX2EsIGJ5ID0gImRpc3B1dGUiKSAlPiUgDQogIHNlbGVjdChkaXNwdXRlLCBjb3VudHJ5LngsIGNvdW50cnkueSkNCmBgYA0KDQo=</div>
 
 
 

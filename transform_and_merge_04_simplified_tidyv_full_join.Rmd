@@ -9,6 +9,7 @@ Ryan had a much more efficient approach.  Here I'll implement his logic using ti
 library(tidyverse)
 ```
 
+## Build data frame (country_df) from the first script. Or, see [README](https://github.com/libjohn/codestub-full_join-separate-for-loop/blob/master/README.md) for a view of sample data that you can recreate yourself.
 
 ```{r sidea}
 side_a <- country_df %>% 
