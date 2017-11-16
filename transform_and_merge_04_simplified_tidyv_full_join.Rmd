@@ -1,0 +1,23 @@
+---
+title: "simplified tidyverse with fulljoin"
+output: html_notebook
+---
+
+Ryan had a much more efficient approach.  Here I'll implement his logic using tidyverse syntax
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r sidea}
+side_a <- country_df %>% 
+  filter(side_a == 0)
+
+side_b <- country_df %>% 
+  filter(side_a == 1)
+  
+full_join(side_b, side_a, by = "dispute") %>% 
+  select(dispute, country.x, country.y)
+```
+

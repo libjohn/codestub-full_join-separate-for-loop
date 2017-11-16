@@ -1,0 +1,89 @@
+---
+title: "Share Example"
+output: html_notebook
+---
+
+**Goal:** identify countries on opposite sides
+
+## Load Libraries
+
+```{r}
+library(tidyverse)
+```
+
+
+## Example Data
+
+```{r}
+country <- c("A","B","C","D","A","E","F","A","C","D","G","H")
+dispute <- c(1,1,1,1,2,2,2,3,3,3,3,3)
+side_a <- c(0,0,1,1,0,1,1,0,1,0,1,0)
+side_b <- c(1,1,0,0,1,0,0,1,1,1,0,0)
+
+country_df <- data_frame(country, dispute, side_a, side_b)
+
+country_df
+
+```
+
+## Identify Sides 
+
+### Side B Countries
+
+```{r}
+side_a <- country_df %>% 
+  filter(side_a == 0)
+  
+side_a
+```
+
+### Side A Countries
+
+```{r}
+side_b <- country_df %>% 
+  filter(side_a == 1)
+  
+side_b
+```
+
+
+## Transform Data ; Build Data Frame
+
+```{r}
+
+# declare Tibble (data frame)
+df_total = tibble()
+
+for (i in 1:max(country_df$dispute)) {
+  # Build vector of disputants for each Dispute Category
+  country_y <- country_df %>% 
+    filter(dispute == i) %>% 
+    select(-dispute) %>% 
+    mutate(side_a = if_else(side_a == 0, country, NA_character_),
+           side_b = if_else(side_b == 0, country, NA_character_)) %>% 
+    select(side_b) %>% 
+    na.omit() %>% 
+    unique() %>% 
+    .[[1]] %>% 
+    paste(., collapse = "|") 
+  
+  # Build a data frame that adds the disputants vector as a column-variable; 
+  # drops blank rows ; then split the multi-valued cells (disputants)
+  country_df_temp <- country_df %>% 
+    filter(dispute == i) %>% 
+    mutate(side_a = if_else(side_a == 0, country, NA_character_),
+           country_disputes = if_else(side_b == 1, country_y, NA_character_)) %>% 
+    select(country, country_disputes) %>% 
+    drop_na() %>% 
+    separate_rows(country_disputes, convert = TRUE) %>% 
+    arrange(country_disputes) %>% 
+    mutate(Dispute = i)
+  
+  # Append big Dataframe from from the iterated dataframes
+  df_total <- bind_rows(df_total, country_df_temp)
+  
+}
+
+df_total
+
+```
